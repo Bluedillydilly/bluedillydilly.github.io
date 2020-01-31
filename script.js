@@ -1,51 +1,44 @@
 // Write the current date to the document
-let writeDate = function () {
-	let today = new Date();
-	document.write("<p>Document accessed on: "+ today.toString()+ "</p>");	
+//let writeDate = function () {
+//	let today = new Date();
+//	document.write("<p>Document accessed on: "+ today.toString()+ "</p>");	
+//	document.createElement("button");
+//}
+
+// Button related handler
+
+let btnclick = function () {
+	console.log("Button was clicked!");
+	console.log(this);
 }
 
-// Opens a new document and writes 'Hello World!' to it
-let hello = function () {
-	let w = window.open();
-	let d = w.document; // get the document of the window
-	d.write("<h1>Hello world!</h1>"); // write to the document
-	d.close();
-}
-
-// change the background color of the document
-let changeBG = function () {
-	document.bgColor = "#DEADDC";
+let buttonHandler = function () {
+	console.log("Assigning button handlers...")
+	let buttons = document.getElementById("ibtn");
+	console.log("Buttons:",buttons);
+	for (let btn of buttons) {
+		console.log("btn:",btn.id);
+		btn.addEventListener("click", btnclick);
+	}
+	console.log("Assigned button assignHandlers.");
 }
 
 
-// writes the URL to the document
-let writeURL = function () {
-	document.write("Location of this document: ", document.URL);
-}
+/////////////////////////////////////
+
 
 // Assign event handlers
 let assignHandlers = function () {
-	console.log("HELLO");
-	var score = document.getElementById("a1");
-	console.log("Score:"+score.textContent);
-	score.addEventListener("onclick", function(e) {console.log(e)});
-	var mydiv = document.getElementById("mydiv");
-	mydiv.addEventListener("mousedown", function () {alert(a1.value)});
+	console.log("Assigning handlers...");
+	buttonHandler();
+	console.log("Finished assigning handlers.");
 }
-
-
-////////////////////////////////
 
 // wrapper to call functions
 let setup = function () {
-	writeDate();
-	//hello();
-	changeBG();
-	writeURL();
+	console.log("Setting up...");
 	assignHandlers();
+	console.log("Setting up finished.");
 }
-//assignHandlers();
 
-function onclick () {
-	console.log("Button was clicked!");
-}
+setup();
