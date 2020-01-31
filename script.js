@@ -8,13 +8,12 @@
 // Button related handler
 
 let btnclick = function () {
-	console.log("Button was clicked!");
-	console.log(this);
+	if (!this.value) this.value=0;this.value++;console.log(this.value);this.innerText=this.value;
 }
 
 let buttonHandler = function () {
 	console.log("Assigning button handlers...")
-	let buttons = document.getElementById("ibtn");
+	let buttons = document.getElementsByTagName("BUTTON");
 	console.log("Buttons:",buttons);
 	for (let btn of buttons) {
 		console.log("btn:",btn.id);
