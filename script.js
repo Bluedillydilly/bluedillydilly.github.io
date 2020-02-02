@@ -8,7 +8,23 @@
 // Button related handler
 
 let btnclick = function () {
-	if (!this.value) this.value=0;this.value++;console.log(this.value);this.innerText=this.value;
+	if (!this.value) {
+		this.value=0;
+	}
+	this.value+=1;
+	console.log(this.value);
+	console.log(this)
+	this.innerText=this.value;
+}
+
+let click2 = function () {
+	if (!this.value) { 
+		this.value=0;
+	}
+	this.value+=1;
+	console.log("Value: ",this.value);
+	this.innerText=this.value;
+	console.log("Text content:", this.innerHTML);
 }
 
 let buttonHandler = function () {
@@ -40,4 +56,5 @@ let setup = function () {
 	console.log("Setting up finished.");
 }
 
-setup();
+//setup();
+//document.getElementById("btn").addEventListener("onclick", btnclick);
