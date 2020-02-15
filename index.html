@@ -1,24 +1,15 @@
 <html>
-
-	<button id="btn1">Act-once button</button>
-	<button>Act-once button</button>
-	<script>
-		let button = document.querySelector("#btn1");
-		console.log("btn:", button);
-		function once() {
-			console.log("Done.", button.value);
-			if (!button.value) {
-				button.value = 0;
-			}
-			button.value = 1 + +button.value;
-			if (button.value % 5 === 3 ) {
-				button.textContent = button.value;
-			}
-			else{
-				button.textContent = "Calculating...";
-			}
-		}
-		button.addEventListener("click", once);
-	</script>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<table>
+		<tr>
+			<td>Buttons</td>
+			<td><button class="btn" id="btn1">0</button></td>
+			<td><button class="btn">Act-once button</button></td>
+		</tr>
+	</table>
+	
+	<script src="script.js"></script>
 
 </html>
