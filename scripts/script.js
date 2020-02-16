@@ -1,4 +1,4 @@
-import './table.js/index.js';
+import './table.js';
 
 // Button related handler
 
