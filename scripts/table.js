@@ -53,6 +53,9 @@ export function createTable (entries, name="table") {
 	if (!entries) {
 		//errorLog(createTable, "no valid table entries provided", "provided: "+entries);
 	}
+	else {
+		console.log("Entries: ",entries);
+	}
 	let table = Table();
 	table = document.querySelector("table");
 	// table caption
