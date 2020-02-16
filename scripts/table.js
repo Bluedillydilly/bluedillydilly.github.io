@@ -57,7 +57,7 @@ export function createTable (entries, name="table") {
 	else {
 		console.log("Entries: ",entries);
 	}
-	let table = Table();
+	let table = document.getElementsByClassName("genTable");
 	// table caption
 	addCaption(table, name);
 	// create table headers
