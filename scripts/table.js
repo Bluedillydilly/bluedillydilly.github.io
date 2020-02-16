@@ -14,11 +14,12 @@ let addCaption = function (table, name) {
 
 let addHeaders = function (table, entry) {
 	console.log("Entry: ", entry);
-	let row = document.createElement("tr");
+	let headers = table.createTHead()
+	let row = headers.insertRow();
 	for (let key in entry) {
 		let th = document.createElement("th")
 		let thText = document.createTextNode(key);
-		th.append(thText);
+		th.appendChild(thText);
 		row.appendChild(th);
 	}
 	table.appendChild(row);
@@ -31,8 +32,8 @@ let valuesOf = function(d){
 	return Object.keys(d).map(function(k){return d[k]})
 }
 
-let Row = function (entry) {
-	let row = document.createElement("tr");
+let Row = function (table, entry) {
+	let row = table.insertRow();
 	for ( var value in valuesOf(entry) ) {
 		let cell = row.insertCell();
 		let cellText = document.createTextNode(value);
@@ -43,7 +44,7 @@ let Row = function (entry) {
 
 let addRows = function (table, entries) {
 	for (var entry in entries) {
-		table.appendChild( Row(entry) );
+		Row(table, entry);
 	}
 }
 
