@@ -15,7 +15,7 @@ let addCaption = function (table, name) {
 let addHeaders = function (table, entry) {
 	console.log("Entry: ", entry);
 	let row = document.createElement("tr");
-	for (let key of entry) {
+	for (let key in entry) {
 		let th = document.createElement("th")
 		let thText = document.createTextNode(key);
 		th.append(thText);
