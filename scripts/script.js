@@ -33,7 +33,10 @@ let setup = function () {
 	console.log("Setting up...");
 	assignHandlers();
 	console.log("Adding table...");
-	Table_m.createTable({'name':"Dylan", 'age':20, 'location':'NY'},"People");
+	let persons = [{'name':"Dylan", 'age':20, 'location':'NY'},
+			{'name':'Ryan', 'age':18, 'location':'NH'},
+			{'name':'Sarah', 'age':23, 'location':'IN'}];
+	Table_m.createTable(persons,"People");
 	console.log("Setting up finished.");
 }
 
