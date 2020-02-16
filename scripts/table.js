@@ -6,10 +6,9 @@ let Table = function () {
 }
 
 let addCaption = function (table, name) {
-	let tcap = document.createElement("caption")
+	let tcap = table.createCaption();
 	let tcapName = document.createTextNode(name);
 	tcap.appendChild(tcapName);
-	table.appendChild(tcap);
 }
 
 let addHeaders = function (table, entry) {
