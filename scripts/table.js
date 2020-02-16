@@ -13,6 +13,7 @@ let addCaption = function (table, name) {
 }
 
 let addHeaders = function (table, entry) {
+	console.log("Entry: ", entry);
 	let row = document.createElement("tr");
 	for (let key of entry) {
 		let th = document.createElement("th")
