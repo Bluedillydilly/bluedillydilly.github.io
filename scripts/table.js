@@ -58,7 +58,6 @@ export function createTable (entries, name="table") {
 		console.log("Entries: ",entries);
 	}
 	let table = Table();
-	table = document.querySelector("table");
 	// table caption
 	addCaption(table, name);
 	// create table headers
