@@ -59,7 +59,7 @@ export function createTable (entries, name="table") {
 	}
 	let table = document.getElementsByClassName("genTable");
 	// table caption
-	//addCaption(table, name);
+	addCaption(table, name);
 	// create table headers
 	addHeaders(table, entries[0]);
 	// create table rows
