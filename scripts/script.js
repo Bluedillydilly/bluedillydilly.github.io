@@ -1,4 +1,4 @@
-import './table.js';
+import { createTable } from './table.js';
 
 // Button related handler
 
