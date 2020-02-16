@@ -1,4 +1,3 @@
-import { errorLog } from './errorLog.js';
 
 
 let Table = function () {
@@ -52,13 +51,16 @@ let addRows = function (table, entries) {
 // [{ 'name':'Dylan', 'age':'20', ...  }, ...]
 export function createTable (entries, name="table") {
 	if (!entries) {
-		errorLog(createTable, "no valid table entries provided", "provided: "+entries);
+		//errorLog(createTable, "no valid table entries provided", "provided: "+entries);
 	}
 	let table = Table();
+	table = document.querySelector("table");
 	// table caption
 	addCaption(table, name);
 	// create table headers
 	addHeaders(table, entries[0]);
 	// create table rows
 	addRows(table, entries);
+	// add the table to the document
+	document.appendChild(table);
 }
