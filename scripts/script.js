@@ -1,4 +1,4 @@
-import { createTable } from './table.js';
+import * as Table_m from "./table.js";
 
 // Button related handler
 
@@ -33,7 +33,7 @@ let setup = function () {
 	console.log("Setting up...");
 	assignHandlers();
 	console.log("Adding table...");
-	createTable({'name':"Dylan", 'age':20, 'location':'NY'},"People");
+	Table_m.createTable({'name':"Dylan", 'age':20, 'location':'NY'},"People");
 	console.log("Setting up finished.");
 }
 
