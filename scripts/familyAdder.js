@@ -5,7 +5,6 @@ import { addPerson } from "./table.js";
 export let onclickNewFM = function () {
     // get name field value
     let name = document.getElementById("person-add-name").value;
-    console.log(name);
     if (!validateName(name))
     {
         // display some warning incorrect age
@@ -16,7 +15,6 @@ export let onclickNewFM = function () {
 
     // get age field value
     let age = document.getElementById("person-add-age").value;
-    console.log(age);
     if (!validateAge(age))
     {
         // display some warning incorrect age
@@ -25,7 +23,6 @@ export let onclickNewFM = function () {
     }
     // get location field value
     let loc = document.getElementById("person-add-location").value;
-    console.log(loc);
     if (!validateLoc(loc))
     {
         // display some warning incorrect age
