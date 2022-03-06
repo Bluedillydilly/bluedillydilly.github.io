@@ -5,26 +5,6 @@ function Table () {
 	return table;
 }
 
-let addCaption = function (table, name) {
-	let tcap = table.createCaption();
-	let tcapName = document.createTextNode(name);
-	tcap.appendChild(tcapName);
-};
-
-let addHeaders = function (table, headerList) {
-	console.log(`Adding header '${headerList}' to table`);
-	let headers = table.createTHead();
-	let row = headers.insertRow();
-	headerList.forEach(h => {
-		let th = document.createElement("th");
-		let thText = document.createTextNode(h);
-		th.appendChild(thText);
-		row.appendChild(th);
-	});
-	table.appendChild(row);
-
-};
-
 let addRows = function (table, entries) {
 	entries.forEach(entry => Row(table, entry));
 };
@@ -54,6 +34,24 @@ export function createTable (id, entries, name="default table") {
 		console.log("Entries: ",entries);
 	}
 	let table = document.getElementById(id);
+	let addCaption = function (table, name) {
+		let tcap = table.createCaption();
+		let tcapName = document.createTextNode(name);
+		tcap.appendChild(tcapName);
+	};
+	let addHeaders = function (table, headerList) {
+		console.log(`Adding header '${headerList}' to table`);
+		let headers = table.createTHead();
+		let row = headers.insertRow();
+		headerList.forEach(h => {
+			let th = document.createElement("th");
+			let thText = document.createTextNode(h);
+			th.appendChild(thText);
+			row.appendChild(th);
+		});
+		table.appendChild(row);
+	};
+
 	console.log(table);
 	// table caption
 	addCaption(table, name);
