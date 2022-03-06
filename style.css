@@ -5,9 +5,10 @@ table, th, td {
 body {
 	background-color: bisque;
 }
+input[type="text"] {
+	size: "5%";
+}
+
 .btn {
 	text-align: center;
-}
-.input[type="text"] {
-	size: "5%";
 }
