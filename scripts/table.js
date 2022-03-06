@@ -65,6 +65,11 @@ export function createTable (id, entries, name="default table") {
 
 export function addPerson(tableId, entry)
 {
+	addPersons(tableId, [entry]);
+}
+
+export function addPersons(tableId, entries)
+{
 	let table = document.getElementById(tableId);
-	addRows(table, [entry]);
+	addRows(table, entries)
 }
